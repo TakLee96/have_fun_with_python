@@ -1,0 +1,8 @@
+(define (fib n)
+  (define (fib-iter k last prev)
+    (if (= n k)
+      (+ last prev)
+      (fib-iter (+ k 1)
+		(+ last prev)
+		last)))
+  (fib-iter 0 1 0))
